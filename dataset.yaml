@@ -1,0 +1,36 @@
+# ============================================================
+#  Dataset Configuration — Tesla Autopilot Clone
+#  YOLOv8 Training Dataset YAML
+# ============================================================
+#
+#  Dataset Structure Expected:
+#
+#  dataset/
+#  ├── images/
+#  │   ├── train/   ← training images (.jpg / .png)
+#  │   ├── val/     ← validation images
+#  │   └── test/    ← test images (optional)
+#  └── labels/
+#      ├── train/   ← YOLO format .txt label files
+#      ├── val/
+#      └── test/
+#
+#  YOLO Label Format (per line in .txt):
+#    class_id  x_center  y_center  width  height
+#    (all values normalized 0–1)
+# ============================================================
+
+# Paths — update these to match your local dataset location
+path:  ./dataset          # root dataset directory
+train: images/train
+val:   images/val
+test:  images/test        # optional
+
+# Number of classes
+nc: 3
+
+# Class names (in order — index must match label files)
+names:
+  0: Vehicle
+  1: Pedestrian
+  2: Traffic Sign
